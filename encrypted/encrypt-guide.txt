@@ -1,26 +1,26 @@
 
 https://linuxier.com/how-to-encrypt-files-in-linux/
 
-
 # migrate gpg keys
 cd encrypted
 tar cvf gnupg.tar .gnupg
 
 # install on target machine
-cp ~/.gnupg ~/.gcupg-orig
+cp -rf ~/.gnupg ~/.gnupg-orig
+cd ~/projects/heidless-aws/aws-DOCS/encrypted
 cp gnupg.tar ~
 cd
 tar xvf gnupg.tar
 
-
+PASSPHRASE: the widening gyre 0
 
 #########
 # encrypt
 #
 #export FILE_NAME=RoR-DEPLOY.md
 #export FILE_NAME=APP-INIT.md
-#export FILE_NAME=AWS-NOTES.md
-export FILE_NAME=aws-S3.md
+export FILE_NAME=AWS-NOTES.md
+#export FILE_NAME=aws-S3.md
 
 gpg --output ${FILE_NAME}.gpg --encrypt --recipient rob.lockhart@yahoo.co.uk ${FILE_NAME}
 
@@ -28,6 +28,9 @@ gpg --output ${FILE_NAME}.gpg --encrypt --recipient rob.lockhart@yahoo.co.uk ${F
 #########
 # decrypt
 #
+#export FILE_NAME=RoR-INSTALL-DEPLOY-0.md
+#export FILE_NAME=AWS-NOTES.md
 export FILE_NAME=RoR-INSTALL-DEPLOY-0.md
-gpg --output RoR-INSTALL-DEPLOY-0.md --decrypt RoR-INSTALL-DEPLOY-0.md.gpg
+
+gpg --output ${FILE_NAME} --decrypt ${FILE_NAME}.gpg
 
