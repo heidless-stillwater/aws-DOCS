@@ -19,8 +19,9 @@ PASSPHRASE: the widening gyre 0
 #
 #export FILE_NAME=RoR-DEPLOY.md
 #export FILE_NAME=APP-INIT.md
-export FILE_NAME=AWS-NOTES.md
+#export FILE_NAME=AWS-NOTES.md
 #export FILE_NAME=aws-S3.md
+export FILE_NAME=aws-NOTES-SECURE.md
 
 gpg --output ${FILE_NAME}.gpg --encrypt --recipient rob.lockhart@yahoo.co.uk ${FILE_NAME}
 
@@ -29,8 +30,8 @@ gpg --output ${FILE_NAME}.gpg --encrypt --recipient rob.lockhart@yahoo.co.uk ${F
 # decrypt
 #
 #export FILE_NAME=RoR-INSTALL-DEPLOY-0.md
-#export FILE_NAME=AWS-NOTES.md
-export FILE_NAME=RoR-INSTALL-DEPLOY-0.md
+export FILE_NAME=AWS-NOTES.md
+#export FILE_NAME=RoR-INSTALL-DEPLOY-0.md
 
 gpg --output ${FILE_NAME} --decrypt ${FILE_NAME}.gpg
 
