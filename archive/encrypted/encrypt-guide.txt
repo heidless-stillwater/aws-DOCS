@@ -30,8 +30,10 @@ gpg --output ${FILE_NAME}.gpg --encrypt --recipient rob.lockhart@yahoo.co.uk ${F
 # decrypt
 #
 #export FILE_NAME=RoR-INSTALL-DEPLOY-0.md
-export FILE_NAME=AWS-NOTES.md
 #export FILE_NAME=RoR-INSTALL-DEPLOY-0.md
+
+export FILE_NAME=AWS-NOTES.md
+export FILE_NAME=aws-NOTES-SECURE.md
 
 gpg --output ${FILE_NAME} --decrypt ${FILE_NAME}.gpg
 
